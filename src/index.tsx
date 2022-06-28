@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 
-import './index.scss';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { store } from './store/store';
+import './index.scss';
+import './styles/normalize.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -11,8 +13,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
 );
-
-reportWebVitals();

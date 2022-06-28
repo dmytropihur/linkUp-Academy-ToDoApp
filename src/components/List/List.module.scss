@@ -1,0 +1,24 @@
+.wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.title {
+  text-align: center;
+  font-size: 75px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

@@ -1,0 +1,39 @@
+.item {
+  display: flex;
+  gap: 30px;
+}
+
+.text {
+  flex-grow: 1;
+}
+
+.textChecked {
+  flex-grow: 1;
+  text-decoration: line-through;
+  color: grey;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.pinIcon {
+  color: #1976d2;
+  cursor: pointer;
+}
+
+.pinOutlinedIcon {
+  cursor: pointer;
+}
+
+.deleteIcon {
+  color: red;
+  cursor: pointer;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+}

@@ -1,6 +1,6 @@
 import { TaskItem } from '../store/tasks/types';
 
-const getCartFromLS = () => {
+const getTaskFromLS = () => {
   const data = localStorage.getItem('tasks');
   const items = data ? JSON.parse(data) : [];
 
@@ -9,4 +9,4 @@ const getCartFromLS = () => {
   };
 };
 
-export default getCartFromLS;
+export default getTaskFromLS;

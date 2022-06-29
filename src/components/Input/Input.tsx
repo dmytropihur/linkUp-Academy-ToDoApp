@@ -41,12 +41,7 @@ const Input: React.FC = () => {
         onChange={(e) => onChangeInput(e)}
         className={styles.input}
       />
-      <Button
-        disabled={open}
-        type="button"
-        onClick={onSubmitTask}
-        variant="contained"
-      >
+      <Button type="button" onClick={onSubmitTask} variant="contained">
         Add
       </Button>
       <SnackBar open={open} setOpen={setOpen}>

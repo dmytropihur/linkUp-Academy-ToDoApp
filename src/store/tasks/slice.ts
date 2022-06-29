@@ -18,33 +18,36 @@ const tasksSlice = createSlice({
       // eslint-disable-next-line no-param-reassign
       state.items = state.items.filter((obj) => obj.id !== action.payload);
     },
-    completeTask(state, action: PayloadAction<string>) {
+    toggleCompleteTask(state, action: PayloadAction<string>) {
       const findItem = state.items.find((obj) => obj.id === action.payload);
 
       if (findItem) {
         findItem.completed = !findItem.completed;
       }
     },
-    pinTask(state, action: PayloadAction<number>) {
-      const newObj = state.items.splice(action.payload, 1);
-
-      newObj[0].pinned = true;
-      state.items.unshift(newObj[0]);
-    },
-    unpinTask(state, action: PayloadAction<string>) {
+    togglePin(state, action: PayloadAction<string>) {
       const findItem = state.items.find((obj) => obj.id === action.payload);
 
-      if (findItem) {
+      if (findItem && findItem.pinned) {
+        // eslint-disable-next-line no-param-reassign
         findItem.pinned = false;
-      }
+        // eslint-disable-next-line no-param-reassign
+        state.items = unpinSort(state.items);
+      } else if (findItem && !findItem.pinned) {
+        const index = state.items.indexOf(findItem);
 
-      // eslint-disable-next-line no-param-reassign
-      state.items = unpinSort(state.items);
+        // eslint-disable-next-line no-param-reassign
+        findItem.pinned = true;
+
+        const newObj = state.items.splice(index, 1);
+
+        state.items.unshift(newObj[0]);
+      }
     },
   },
 });
 
-export const { addTask, deleteTask, completeTask, pinTask, unpinTask } =
+export const { addTask, deleteTask, toggleCompleteTask, togglePin } =
   tasksSlice.actions;
 
 export default tasksSlice.reducer;

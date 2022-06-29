@@ -22,7 +22,6 @@ const ListRow: React.FC<ListRowProps> = ({ task, onDeleteTask }) => {
   const date = format(task.createdAt, 'do MMM yyyy');
 
   const onTogglePin = () => {
-    console.log('click');
     dispatch(togglePin(task.id));
   };
 

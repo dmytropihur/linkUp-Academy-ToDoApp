@@ -28,12 +28,14 @@ const tasksSlice = createSlice({
     togglePin(state, action: PayloadAction<string>) {
       const findItem = state.items.find((obj) => obj.id === action.payload);
 
-      if (findItem && findItem.pinned) {
+      if (!findItem) return;
+
+      if (findItem.pinned) {
         // eslint-disable-next-line no-param-reassign
         findItem.pinned = false;
         // eslint-disable-next-line no-param-reassign
         state.items = unpinSort(state.items);
-      } else if (findItem && !findItem.pinned) {
+      } else {
         const index = state.items.indexOf(findItem);
 
         // eslint-disable-next-line no-param-reassign

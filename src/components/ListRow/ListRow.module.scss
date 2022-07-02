@@ -1,6 +1,14 @@
+@import "../../styles/variables.scss";
+
 .item {
   display: flex;
   gap: 30px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .text {
@@ -20,20 +28,28 @@
 }
 
 .pinIcon {
-  color: #1976d2;
+  color: $secondary-color;
   cursor: pointer;
 }
 
 .pinOutlinedIcon {
   cursor: pointer;
+  &:hover {
+    color: $secondary-color;
+  }
 }
 
 .deleteIcon {
-  color: red;
+  &:hover {
+    color: red;
+  }
   cursor: pointer;
 }
 
 .date {
   display: flex;
   align-items: center;
+  color: $secondary-color;
+  font-weight: 500;
+  font-size: 16px;
 }

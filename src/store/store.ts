@@ -1,11 +1,21 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 
+import bored from './bored/slice';
+import catFact from './catFact/slice';
+import dogImage from './dogImage/slice';
+import ipGeo from './ipGeo/slice';
 import tasks from './tasks/slice';
+import weather from './weather/slice';
 
 export const store = configureStore({
   reducer: {
     tasks,
+    weather,
+    catFact,
+    dogImage,
+    ipGeo,
+    bored,
   },
 });
 

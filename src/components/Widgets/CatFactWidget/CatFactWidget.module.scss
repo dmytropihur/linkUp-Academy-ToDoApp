@@ -1,0 +1,15 @@
+@import "../../../styles/variables.scss";
+
+.box {
+  background-color: $blurBg-color;
+  padding: 24px 32px;
+  border-radius: 25px;
+}
+
+.title {
+  color: $secondary-color;
+}
+
+.text {
+  font-size: 16px;
+}

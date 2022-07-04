@@ -9,19 +9,35 @@
 
 .data {
   display: flex;
+  gap: 30px;
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .left {
-  flex: 1;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 700px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 560px) {
+    align-items: center;
+  }
 }
 
 .right {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 560px) {
+    align-items: center;
+  }
 }
 
 .city {
@@ -29,10 +45,19 @@
   font-weight: 600;
   color: $secondary-color;
   font-size: 40px;
+
+  @media (max-width: 700px) {
+    margin: 0;
+  }
+
+  @media (max-width: 560px) {
+    text-align: center;
+  }
 }
 
 .weather {
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 
@@ -41,6 +66,14 @@
   line-height: 1;
   font-weight: 200;
   color: $secondary-color;
+
+  @media (max-width: 700px) {
+    font-size: 75px;
+  }
+
+  @media (max-width: 560px) {
+    font-size: 60px;
+  }
 }
 
 .weatherDesc {
@@ -50,6 +83,11 @@
 .img {
   width: 100px;
   height: 100px;
+
+  @media (max-width: 700px) {
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .tempRange {

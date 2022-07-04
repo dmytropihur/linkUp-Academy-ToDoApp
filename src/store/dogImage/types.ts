@@ -1,3 +1,5 @@
+import Status from '../types';
+
 type DogImage = {
   message: string;
   status: string;
@@ -5,5 +7,5 @@ type DogImage = {
 
 export type DogImageSliceState = {
   dogImage: DogImage;
-  status: 'idle' | 'pending' | 'fulfilled' | 'rejected';
+  status: Status;
 };

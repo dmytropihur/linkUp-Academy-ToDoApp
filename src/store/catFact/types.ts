@@ -1,3 +1,5 @@
+import Status from '../types';
+
 type CatFact = {
   fact: string;
   length: number;
@@ -5,5 +7,5 @@ type CatFact = {
 
 export type CatFactSliceState = {
   catFact: CatFact;
-  status: 'idle' | 'pending' | 'fulfilled' | 'rejected';
+  status: Status;
 };

@@ -20,12 +20,10 @@ const App: React.FC = () => {
   }, [tasks]);
 
   useEffect(() => {
-    Promise.all([
-      dispatch(fetchWeather()),
-      dispatch(fetchBored()),
-      dispatch(fetchCatFact()),
-      dispatch(fetchDogImage()),
-    ]).then((values) => console.log(values));
+    dispatch(fetchWeather());
+    dispatch(fetchBored());
+    dispatch(fetchCatFact());
+    dispatch(fetchDogImage());
   }, []);
 
   return (

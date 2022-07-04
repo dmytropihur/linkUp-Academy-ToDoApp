@@ -3,8 +3,13 @@
 }
 
 .container {
-  padding: 0 20px;
+  padding: 0 20px 100px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 50px;
+
+  @media (max-width: 1350px) {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
 }

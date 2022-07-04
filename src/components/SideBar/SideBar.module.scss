@@ -1,6 +1,19 @@
 .aside {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 300px);
+  grid-template-columns: repeat(2, 290px);
   gap: 30px;
+
+  @media (max-width: 1350px) {
+    grid-template-columns: repeat(3, 290px);
+    justify-content: center;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 290px);
+  }
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -1,3 +1,5 @@
+import Status from '../types';
+
 type Weather = {
   id: number;
   main: string;
@@ -43,6 +45,6 @@ export type WeatherObject = {
 };
 
 export interface WeatherSliceState {
-  status: 'idle' | 'pending' | 'fulfilled' | 'rejected';
+  status: Status;
   weather: WeatherObject;
 }

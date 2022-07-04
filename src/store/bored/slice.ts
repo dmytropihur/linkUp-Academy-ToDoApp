@@ -23,10 +23,7 @@ export const fetchBored = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const res = await axios
-        .get(
-          // eslint-disable-next-line max-len
-          BASE_BORED_API_URL,
-        )
+        .get(BASE_BORED_API_URL)
         .then((response) => response.data);
 
       return res;

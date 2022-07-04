@@ -30,10 +30,7 @@ export const fetchIpGeo = createAsyncThunk(
   async (ip: string, { rejectWithValue }) => {
     try {
       const res = await axios
-        .get(
-          // eslint-disable-next-line max-len
-          `${BASE_IP_GEO_API_URL}/${ip}`,
-        )
+        .get(`${BASE_IP_GEO_API_URL}/${ip}`)
         .then((response) => response.data);
 
       return res;

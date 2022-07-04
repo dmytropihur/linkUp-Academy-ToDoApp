@@ -1,8 +1,10 @@
 import SearchIcon from '@mui/icons-material/Search';
+import axios from 'axios';
 import { isIP } from 'is-ip';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
+import { BASE_USER_IP_GEO_URL } from '../../../constants/constants';
 import selectIpGeo from '../../../store/ipGeo/selectors';
 import { fetchIpGeo } from '../../../store/ipGeo/slice';
 import { useAppDispatch } from '../../../store/store';
@@ -23,6 +25,15 @@ const IPWidget: React.FC = () => {
     dispatch(fetchIpGeo(ip));
   };
 
+  useEffect(() => {
+    (async () => {
+      await axios
+        .get(BASE_USER_IP_GEO_URL)
+        .then((response) => response.data)
+        .then((response) => dispatch(fetchIpGeo(response.dns.ip)));
+    })();
+  }, []);
+
   return (
     <div className={styles.root}>
       <div className={styles.header}>
@@ -33,7 +44,7 @@ const IPWidget: React.FC = () => {
             type="text"
             value={ip}
             onChange={onInputChange}
-            placeholder="Type your IP address"
+            placeholder={ipGeo.query}
           />
           <button
             className={styles.button}

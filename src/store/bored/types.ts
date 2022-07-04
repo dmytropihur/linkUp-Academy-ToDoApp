@@ -1,3 +1,5 @@
+import Status from '../types';
+
 type Bored = {
   activity: string;
   accessibility: number;
@@ -10,5 +12,5 @@ type Bored = {
 
 export type BoredSliceState = {
   bored: Bored;
-  status: 'idle' | 'pending' | 'fulfilled' | 'rejected';
+  status: Status;
 };

@@ -18,10 +18,7 @@ export const fetchDogImage = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const res = await axios
-        .get(
-          // eslint-disable-next-line max-len
-          BASE_DOG_API_URL,
-        )
+        .get(BASE_DOG_API_URL)
         .then((response) => response.data);
 
       return res;

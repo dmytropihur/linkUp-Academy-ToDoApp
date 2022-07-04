@@ -6,9 +6,14 @@
   flex-direction: column;
   gap: 40px;
 }
+
 .title {
   text-align: center;
   font-size: 75px;
+
+  @media (max-width: 768px) {
+    font-size: 60px !important;
+  }
 }
 
 .list {

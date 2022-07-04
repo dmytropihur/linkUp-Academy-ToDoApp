@@ -1,3 +1,5 @@
+import Status from '../types';
+
 type IpGeo = {
   query: string;
   status: string;
@@ -17,5 +19,5 @@ type IpGeo = {
 
 export type IpGeoSliceState = {
   ipGeo: IpGeo;
-  status: 'idle' | 'pending' | 'fulfilled' | 'rejected';
+  status: Status;
 };

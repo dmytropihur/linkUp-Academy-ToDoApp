@@ -6,6 +6,7 @@ import catFact from './catFact/slice';
 import dogImage from './dogImage/slice';
 import ipGeo from './ipGeo/slice';
 import tasks from './tasks/slice';
+import user from './user/slice';
 import weather from './weather/slice';
 
 export const store = configureStore({
@@ -16,6 +17,7 @@ export const store = configureStore({
     dogImage,
     ipGeo,
     bored,
+    user,
   },
 });
 

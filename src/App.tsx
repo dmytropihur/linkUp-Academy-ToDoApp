@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import List from './components/List/List';
 import MainLayout from './layouts/MainLayout/MainLayout';
+import Providers from './providers';
+import AppRoutes from './routes';
 import { fetchBored } from './store/bored/slice';
 import { fetchCatFact } from './store/catFact/slice';
 import { fetchDogImage } from './store/dogImage/slice';
@@ -27,9 +28,11 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <MainLayout>
-      <List />
-    </MainLayout>
+    <Providers>
+      <MainLayout>
+        <AppRoutes />
+      </MainLayout>
+    </Providers>
   );
 };
 

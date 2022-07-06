@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SideBar from '../../components/SideBar/SideBar';
+import Header from '../../components/Header/Header';
 
 import styles from './MainLayout.module.scss';
 
@@ -11,13 +11,8 @@ type MainLayoutProps = {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <>
-      <header className={styles.header}>Header</header>
-      <main className={styles.main}>
-        <div className={styles.container}>
-          {children}
-          <SideBar />
-        </div>
-      </main>
+      <Header />
+      <main className={styles.main}>{children}</main>
     </>
   );
 };

@@ -1,5 +1,15 @@
 @import "./variables.scss";
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
@@ -34,6 +44,11 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 code {

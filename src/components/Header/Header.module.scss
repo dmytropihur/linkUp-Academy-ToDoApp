@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.root {
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon {
+  cursor: pointer;
+}

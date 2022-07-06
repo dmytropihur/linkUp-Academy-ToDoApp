@@ -1,0 +1,80 @@
+@import "../../../styles/variables.scss";
+
+.root {
+  grid-column: 1/3;
+  background-color: $blurBg-color;
+  padding: 24px 32px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 16px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.inputWrapper {
+  border-radius: 10px;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 2px 15px -3px rgb(0 0 0 / 7%), 0 10px 20px -2px rgb(0 0 0 / 4%);
+  padding: 20px 15px;
+}
+
+.input {
+  border-radius: 10px;
+  flex: 1;
+  border: none;
+  outline: transparent;
+  color: $secondary-color;
+  &::placeholder {
+    color: $primary-color;
+  }
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:disabled {
+    .icon {
+      fill: transparent;
+    }
+  }
+}
+
+.icon {
+  fill: $secondary-color;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+}
+
+.name {
+}
+
+.desc {
+  color: $accent-color;
+}
